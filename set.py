@@ -228,3 +228,117 @@ print("SQL students    :", len(students_sql))
 print("Power BI students:", len(students_powerbi))
 print("Unique students :", len(all_students))
 print("All 3 skills    :", len(all_three))
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+# Advanced Python Program: Set Operations
+
+# Taking input from the user
+A = set(map(int, input("Enter elements of Set A separated by space: ").split()))
+B = set(map(int, input("Enter elements of Set B separated by space: ").split()))
+
+print("\nSet A:", A)
+print("Set B:", B)
+
+# 1. Union
+print("\n1. Union (A ∪ B):")
+print(A | B)
+
+# 2. Intersection
+print("\n2. Intersection (A ∩ B):")
+print(A & B)
+
+# 3. Difference
+print("\n3. Difference (A - B):")
+print(A - B)
+
+print("\n4. Difference (B - A):")
+print(B - A)
+
+# 4. Symmetric Difference
+print("\n5. Symmetric Difference (A △ B):")
+print(A ^ B)
+
+# 5. Subset and Superset
+print("\n6. Subset / Superset:")
+print("A is subset of B:", A.issubset(B))
+print("B is subset of A:", B.issubset(A))
+print("A is superset of B:", A.issuperset(B))
+print("B is superset of A:", B.issuperset(A))
+
+# 6. Disjoint Check
+print("\n7. Disjoint Check:")
+print("A and B are disjoint:", A.isdisjoint(B))
+
+# 7. Common elements
+common = A.intersection(B)
+print("\n8. Common Elements:")
+print(common)
+
+# 8. Elements appearing in exactly one set
+unique = A.symmetric_difference(B)
+print("\n9. Elements present in exactly one set:")
+print(unique)
+
+# 9. Set comprehension
+even_numbers = {x for x in A | B if x % 2 == 0}
+odd_numbers = {x for x in A | B if x % 2 != 0}
+
+print("\n10. Even elements using Set Comprehension:")
+print(even_numbers)
+
+print("\n11. Odd elements using Set Comprehension:")
+print(odd_numbers)
+
+# 10. Cartesian Product
+cartesian_product = {(x, y) for x in A for y in B}
+
+print("\n12. Cartesian Product (A × B):")
+print(cartesian_product)
+
+# 11. Power-like operation: pairs having x < y
+ordered_pairs = {(x, y) for x in A for y in B if x < y}
+
+print("\n13. Ordered pairs where x < y:")
+print(ordered_pairs)
+
+# 12. Set statistics
+combined = A | B
+
+if combined:
+    print("\n14. Set Statistics:")
+    print("Number of unique elements:", len(combined))
+    print("Minimum element:", min(combined))
+    print("Maximum element:", max(combined))
+    print("Sum of elements:", sum(combined))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
