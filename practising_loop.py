@@ -23,3 +23,39 @@ if second_largest == float('-inf'):
     print("Second largest number does not exist.")
 else:
     print("Second largest number:", second_largest)
+
+
+
+'''LCM Without Built-in Functions
+Take two numbers and find their LCM using loops.'''
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a > b:
+    start = a
+else:
+    start = b
+
+lcm = start
+
+while True:
+    if lcm % a == 0 and lcm % b == 0:
+        break
+    lcm += 1
+
+print("LCM =", lcm)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
