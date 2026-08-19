@@ -47,6 +47,28 @@ while True:
 print("LCM =", lcm)
 
 
+'''Frequency of a Digit
+
+Count how many times a particular digit appears in a number.
+
+Example: 122333, digit 3 → 3 times'''
+
+num = int(input("Enter a number: "))
+digit = int(input("Enter the digit to find: "))
+
+count = 0
+
+while num > 0:
+    last_digit = num % 10
+
+    if last_digit == digit:
+        count += 1
+
+    num = num // 10
+
+print("Frequency:", count)
+
+
 
 
 
