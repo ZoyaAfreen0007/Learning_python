@@ -46,3 +46,36 @@ print("Highest average:", highest_avg)
 
 
 
+'''Find Second Largest
+
+Find the second-largest element in a tuple without using sort() or sorted().
+
+Example:
+
+numbers = (10, 45, 23, 89, 67, 89)'''
+
+
+
+
+numbers = (10, 45, 23, 89, 67, 89)
+
+largest = float('-inf')
+second_largest = float('-inf')
+
+for num in numbers:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+
+print("Second largest:", second_largest)
+
+
+
+
+
+
+
+
+
