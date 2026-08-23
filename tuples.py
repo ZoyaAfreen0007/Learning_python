@@ -73,6 +73,37 @@ print("Second largest:", second_largest)
 
 
 
+'''Function to Find Maximum and Minimum
+Write a function:
+
+find_min_max(numbers)
+
+that accepts a tuple and returns both the minimum and maximum without using min() or max().'''
+
+
+
+def find_min_max(numbers):
+    minimum = numbers[0]
+    maximum = numbers[0]
+
+    for num in numbers:
+        if num < minimum:
+            minimum = num
+
+        if num > maximum:
+            maximum = num
+
+    return minimum, maximum
+
+
+numbers = (10, 45, 23, 89, 67, 12)
+
+result = find_min_max(numbers)
+
+print("Minimum:", result[0])
+print("Maximum:", result[1])
+
+
 
 
 
