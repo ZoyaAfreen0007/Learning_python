@@ -104,6 +104,107 @@ print("Minimum:", result[0])
 print("Maximum:", result[1])
 
 
+'''Tuple Analysis Function
+
+Write a function:
+
+analyze(numbers)
+
+For:
+
+numbers = (10, 20, 15, 20, 30, 10, 40, 15, 50)
+
+The function should return:
+
+Total elements
+Sum
+Average
+Maximum
+Minimum
+Number of even elements
+Number of odd elements
+Number of duplicate values
+
+Restrictions: Don't use sort(), sorted(), Counter, min(), or max().'''
+
+
+def analyze(numbers):
+    total_elements = 0
+    total_sum = 0
+    even_count = 0
+    odd_count = 0
+
+    # Find total, sum, even and odd
+    for num in numbers:
+        total_elements += 1
+        total_sum += num
+
+        if num % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+
+    average = total_sum / total_elements
+
+    # Find maximum and minimum
+    maximum = numbers[0]
+    minimum = numbers[0]
+
+    for num in numbers:
+        if num > maximum:
+            maximum = num
+
+        if num < minimum:
+            minimum = num
+
+    # Count duplicate values
+    duplicate_count = 0
+
+    for i in range(total_elements):
+        count = 0
+
+        for j in range(total_elements):
+            if numbers[i] == numbers[j]:
+                count += 1
+
+        if count > 1:
+            # Count each duplicated value only once
+            already_counted = False
+
+            for k in range(i):
+                if numbers[k] == numbers[i]:
+                    already_counted = True
+                    break
+
+            if not already_counted:
+                duplicate_count += 1
+
+    return (
+        total_elements,
+        total_sum,
+        average,
+        maximum,
+        minimum,
+        even_count,
+        odd_count,
+        duplicate_count
+    )
+
+
+numbers = (10, 20, 15, 20, 30, 10, 40, 15, 50)
+
+result = analyze(numbers)
+
+print("Total elements:", result[0])
+print("Sum:", result[1])
+print("Average:", result[2])
+print("Maximum:", result[3])
+print("Minimum:", result[4])
+print("Number of even elements:", result[5])
+print("Number of odd elements:", result[6])
+print("Number of duplicate values:", result[7])
+
+
 
 
 
