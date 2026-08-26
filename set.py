@@ -312,7 +312,31 @@ if combined:
     print("Maximum element:", max(combined))
     print("Sum of elements:", sum(combined))
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+'''Remove Elements Present in Another Set
+Modify a set so that all elements that occur in another set are removed, without using difference() or difference_update().'''
+
+A = {1, 2, 3, 4, 5, 6}
+B = {4, 5, 6, 7, 8}
+
+for element in B:
+    A.discard(element)
+
+print(A)
+
+
+
+
+def remove_common(A, B):
+    for element in B:
+        A.discard(element)
+    return A
+
+A = {1, 2, 3, 4, 5}
+B = {3, 4, 6}
+
+print(remove_common(A, B))
 
 
 
