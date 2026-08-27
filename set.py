@@ -339,6 +339,38 @@ B = {3, 4, 6}
 print(remove_common(A, B))
 
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+'''Dynamic Access Control
+Given users and their permission sets, write a function to determine whether a user can perform an operation based on:
+
+Required permissions
+User permissions
+Admin override
+Temporary permissions
+
+'''
+
+
+users = {
+    "Ali": {
+        "permissions": {"read", "write"},
+        "temporary": {"delete"},
+        "admin": False
+    },
+    "Sara": {
+        "permissions": {"read", "write", "delete"},
+        "temporary": set(),
+        "admin": True
+    },
+    "John": {
+        "permissions": {"read"},
+        "temporary": {"write"},
+        "admin": False
+    }
+}
+
+
 
 
 
