@@ -371,9 +371,20 @@ users = {
 }
 
 
+check_access(users, "Ali", {"read"})
+# True
 
+check_access(users, "Ali", {"delete"})
+# True   ← temporary permission
 
+check_access(users, "Ali", {"read", "delete"})
+# True
 
+check_access(users, "John", {"read", "delete"})
+# False
+
+check_access(users, "Sara", {"delete", "admin_panel"})
+# True   ← admin override
 
 
 
