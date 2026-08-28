@@ -386,7 +386,21 @@ check_access(users, "John", {"read", "delete"})
 check_access(users, "Sara", {"delete", "admin_panel"})
 # True   ← admin override
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+'''Set Cover Problem ⭐⭐⭐
+Given a universe of elements and several sets, find the minimum number of sets required to cover the entire universe.
+
+'''
+
+universe = {1, 2, 3, 4, 5, 6}
+
+sets = [ {1, 2, 3},{2, 4},{3, 4, 5},{4, 5, 6}, {1, 6}]
+
+#Write a function:
+
+minimum_set_cover(universe, sets)
 
 
 
