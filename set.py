@@ -389,7 +389,7 @@ check_access(users, "Sara", {"delete", "admin_panel"})
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-'''Set Cover Problem ⭐⭐⭐
+'''Set Cover Problem:-
 Given a universe of elements and several sets, find the minimum number of sets required to cover the entire universe.
 
 '''
@@ -402,7 +402,52 @@ sets = [ {1, 2, 3},{2, 4},{3, 4, 5},{4, 5, 6}, {1, 6}]
 
 minimum_set_cover(universe, sets)
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+'''Find Missing Elements
+Given two sets representing expected and received IDs, find:
+
+Missing IDs
+Extra IDs
+Common IDs
+
+'''
+
+
+def analyze_ids(expected_ids, received_ids):
+    # Convert to sets
+    expected = set(expected_ids)
+    received = set(received_ids)
+
+    # Find differences
+    missing_ids = expected - received
+    extra_ids = received - expected
+
+    # Find common IDs
+    common_ids = expected & received
+
+    # Return result
+    return {
+        "missing_ids": sorted(missing_ids),
+        "extra_ids": sorted(extra_ids),
+        "common_ids": sorted(common_ids),
+        "expected_count": len(expected),
+        "received_count": len(received),
+        "missing_count": len(missing_ids),
+        "extra_count": len(extra_ids),
+        "common_count": len(common_ids)
+    }
+
+
+# Example
+expected_ids = {101, 102, 103, 104, 105, 106, 107}
+received_ids = {101, 103, 104, 105, 108, 109}
+
+result = analyze_ids(expected_ids, received_ids)
+
+for key, value in result.items():
+    print(f"{key}: {value}")
 
 
 
