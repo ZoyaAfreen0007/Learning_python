@@ -449,8 +449,65 @@ result = analyze_ids(expected_ids, received_ids)
 for key, value in result.items():
     print(f"{key}: {value}")
 
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 
+'''
+Group Sets by Similarity
+Given a list of sets, group sets whose Jaccard similarity is above 0.5.
+'''
+
+def jaccard_similarity(set1, set2):
+    intersection = len(set1 & set2)
+    union = len(set1 | set2)
+
+    return intersection / union if union else 1.0
+
+
+def group_similar_sets(sets, threshold=0.5):
+    groups = []
+    visited = set()
+
+    for i in range(len(sets)):
+
+        if i in visited:
+            continue
+
+        group = [i]
+        visited.add(i)
+
+        for j in range(i + 1, len(sets)):
+
+            if j in visited:
+                continue
+
+            similarity = jaccard_similarity(sets[i], sets[j])
+
+            if similarity > threshold:
+                group.append(j)
+                visited.add(j)
+
+        groups.append(group)
+
+    return [[sets[i] for i in group] for group in groups]
+
+
+# Input
+sets = [
+    {1, 2, 3, 4},
+    {1, 2, 3},
+    {10, 20, 30},
+    {10, 20, 40},
+    {1, 2, 4},
+    {100, 200}
+]
+
+result = group_similar_sets(sets)
+
+for i, group in enumerate(result, 1):
+    print(f"Group {i}:")
+    for s in group:
+        print(s)
 
 
 
