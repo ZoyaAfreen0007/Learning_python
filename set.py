@@ -510,7 +510,37 @@ for i, group in enumerate(result, 1):
         print(s)
 
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+'''Subset Chain Problem
+Given:
+
+sets = [
+    {1, 2},
+    {1, 2, 3},
+    {1, 2, 3, 4},
+    {1, 2, 3, 4, 5}
+]
+
+Check whether the sets form a valid subset chain.'''
+
+sets = [
+    {1, 2},
+    {1, 2, 3},
+    {1, 2, 3, 4},
+    {1, 2, 3, 4, 5}
+]
+
+def is_subset_chain(sets):
+    for i in range(len(sets) - 1):
+        if not sets[i].issubset(sets[i + 1]):
+            return False
+    return True
+
+if is_subset_chain(sets):
+    print("Valid subset chain")
+else:
+    print("Not a valid subset chain")
 
 
 
