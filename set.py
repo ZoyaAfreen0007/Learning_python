@@ -542,10 +542,32 @@ if is_subset_chain(sets):
 else:
     print("Not a valid subset chain")
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+'''
+Duplicate Detection Using Sets
+Given a list of integers, determine whether duplicates exist without using count() or Counter.
+
+'''
 
 
+def has_duplicates(numbers):
+    seen = set()
+
+    for num in numbers:
+        if num in seen:
+            return True
+        seen.add(num)
+
+    return False
 
 
+numbers = [10, 20, 30, 40, 20, 50]
+
+if has_duplicates(numbers):
+    print("Duplicates exist")
+else:
+    print("No duplicates")
 
 
 
