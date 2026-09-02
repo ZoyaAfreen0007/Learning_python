@@ -570,6 +570,50 @@ else:
     print("No duplicates")
 
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+'''
+Find Elements Appearing in Exactly Two Sets
+Return all elements that occur in exactly two of the given sets.
+
+'''
+sets = [ {1, 2, 3, 4}, {3, 4, 5, 6}, {4, 5, 6, 7} ]
+
+element_count = {}
+
+# Count occurrence of each element across sets
+for s in sets:
+    for element in s:
+        element_count[element] = element_count.get(element, 0) + 1
+
+# Elements appearing in exactly two sets
+result = {element for element, count in element_count.items() if count == 2}
+
+print("Elements appearing in exactly two sets:", result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
