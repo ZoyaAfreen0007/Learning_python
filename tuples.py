@@ -207,7 +207,16 @@ print("Number of duplicate values:", result[7])
 
 
 
+'''
+Write a function named multiply_all that accepts any number of numerical arguments and returns their product. If no arguments are passed, it should return 1. '''
+def multiply_all(*args):
+    # args is treated as a tuple internally
+    product = 1
+    for num in args:
+        product *= num
+    return product
 
-
+print(multiply_all(2, 3, 4))  # Output: 24
+print(multiply_all())         # Output: 1
 
 
