@@ -220,3 +220,40 @@ print(multiply_all(2, 3, 4))  # Output: 24
 print(multiply_all())         # Output: 1
 
 
+'''
+Frequency of an Element
+Write a function that accepts a tuple and an element, then returns how many times that element occurs without using count().
+'''
+def frequency(t, element):
+    count = 0
+
+    for item in t:
+        if item == element:
+            count += 1
+
+    return count
+
+
+t = (1, 2, 3, 2, 4, 2, 5)
+print(frequency(t, 2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
