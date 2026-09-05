@@ -238,6 +238,37 @@ t = (1, 2, 3, 2, 4, 2, 5)
 print(frequency(t, 2))
 
 
+'''
+Tuple Compression
+Write a function that converts:
+
+(1, 1, 1, 2, 2, 3, 3, 3)
+
+into:
+
+((1, 3), (2, 2), (3, 3))
+'''
+def compress_tuple(t):
+    result = []
+    i = 0
+
+    while i < len(t):
+        value = t[i]
+        count = 0
+
+        while i < len(t) and t[i] == value:
+            count += 1
+            i += 1
+
+        result.append((value, count))
+
+    return tuple(result)
+
+
+t = (1, 1, 1, 2, 2, 3, 3, 3)
+
+print(compress_tuple(t))
+
 
 
 
