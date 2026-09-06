@@ -270,10 +270,30 @@ t = (1, 1, 1, 2, 2, 3, 3, 3)
 print(compress_tuple(t))
 
 
+'''
+Return Top 3 Values
+Write a function that returns the three largest elements of a tuple without using sort() or sorted().
+'''
+
+def top_three(t):
+    first = second = third = float('-inf')
+
+    for num in t:
+        if num > first:
+            third = second
+            second = first
+            first = num
+        elif num > second:
+            third = second
+            second = num
+        elif num > third:
+            third = num
+
+    return (first, second, third)
 
 
-
-
+t = (10, 5, 25, 8, 30, 15, 20)
+print(top_three(t))
 
 
 
