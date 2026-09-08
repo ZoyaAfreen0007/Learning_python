@@ -319,6 +319,49 @@ t = ((1, 2), (3, 4), (5, 6))
 print(nested_sum(t))
 
 
+'''
+Palindrome Tuple
+Write a function that checks whether a tuple is a palindrome without converting it into a string.
+
+(1, 2, 3, 2, 1) → True
+(1, 2, 3, 4) → False
+'''
+def is_palindrome(t):
+    for i in range(len(t) // 2):
+        if t[i] != t[len(t) - 1 - i]:
+            return False
+    return True
+
+
+print(is_palindrome((1, 2, 3, 2, 1)))  
+print(is_palindrome((1, 2, 3, 4)))      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
