@@ -337,9 +337,23 @@ print(is_palindrome((1, 2, 3, 2, 1)))
 print(is_palindrome((1, 2, 3, 4)))      
 
 
+'''
+Sum of Tuple Elements
+Write a function to calculate the sum of all elements in a tuple without using sum().
+'''
+
+def tuple_sum(t):
+    total = 0
+
+    for i in t:
+        total += i
+
+    return total
 
 
+t = (10, 20, 30, 40, 50)
 
+print(tuple_sum(t))
 
 
 
