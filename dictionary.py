@@ -58,3 +58,21 @@ for emp_id, emp in employees.items():
 
 
 
+'''Write a function that accepts a dictionary containing integer values and returns the number of even and odd values.'''
+
+def count_even_odd(d):
+    even = 0
+    odd = 0
+
+    for value in d.values():
+        if value % 2 == 0:
+            even += 1
+        else:
+            odd += 1
+
+    return even, odd
+
+
+d = {"a": 10, "b": 15, "c": 22, "d": 31, "e": 40}
+
+print(count_even_odd(d))
