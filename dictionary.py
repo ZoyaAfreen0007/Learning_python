@@ -76,3 +76,52 @@ def count_even_odd(d):
 d = {"a": 10, "b": 15, "c": 22, "d": 31, "e": 40}
 
 print(count_even_odd(d))
+
+
+'''
+Write a function that combines two dictionaries. If a key exists in both dictionaries, add their values.
+'''
+
+def add_common_values(d1, d2):
+    result = {}
+
+    for key in d1:
+        result[key] = d1[key]
+
+    for key in d2:
+        if key in result:
+            result[key] += d2[key]
+        else:
+            result[key] = d2[key]
+
+    return result
+
+
+d1 = {"a": 10, "b": 20, "c": 30}
+d2 = {"b": 5, "c": 10, "d": 15}
+
+print(add_common_values(d1, d2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
