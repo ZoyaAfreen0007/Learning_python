@@ -102,7 +102,20 @@ d2 = {"b": 5, "c": 10, "d": 15}
 
 print(add_common_values(d1, d2))
 
+'''Write a function to calculate the sum of all values without using sum().'''
 
+def dictionary_sum(d):
+    total = 0
+
+    for value in d.values():
+        total += value
+
+    return total
+
+
+d = {"a": 10, "b": 20, "c": 30}
+
+print(dictionary_sum(d))
 
 
 
