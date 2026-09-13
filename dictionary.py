@@ -118,7 +118,23 @@ d = {"a": 10, "b": 20, "c": 30}
 print(dictionary_sum(d))
 
 
+'''Write a function that accepts a dictionary and returns the key having the maximum value.'''
 
+def max_value_key(d):
+    max_key = None
+    max_value = float('-inf')
+
+    for key in d:
+        if d[key] > max_value:
+            max_value = d[key]
+            max_key = key
+
+    return max_key
+
+
+d = {"A": 45, "B": 78, "C": 32, "D": 90}
+
+print(max_value_key(d))
 
 
 
