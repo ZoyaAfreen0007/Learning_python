@@ -137,7 +137,29 @@ d = {"A": 45, "B": 78, "C": 32, "D": 90}
 print(max_value_key(d))
 
 
+'''Write a function that returns the character occurring most frequently in a string.'''
 
+def most_frequent(s):
+    freq = {}
+
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+
+    max_char = None
+    max_count = 0
+
+    for char in freq:
+        if freq[char] > max_count:
+            max_count = freq[char]
+            max_char = char
+
+    return max_char
+
+
+print(most_frequent("programming"))
 
 
 
