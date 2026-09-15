@@ -162,7 +162,24 @@ def most_frequent(s):
 print(most_frequent("programming"))
 
 
+'''Write a function that merges two dictionaries into one dictionary.'''
 
+def merge_dicts(d1, d2):
+    result = {}
+
+    for key, value in d1.items():
+        result[key] = value
+
+    for key, value in d2.items():
+        result[key] = value
+
+    return result
+
+
+d1 = {"a": 10, "b": 20}
+d2 = {"c": 30, "d": 40}
+
+print(merge_dicts(d1, d2))
 
 
 
