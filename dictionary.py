@@ -182,7 +182,28 @@ d2 = {"c": 30, "d": 40}
 print(merge_dicts(d1, d2))
 
 
+'''Write a function that returns the key whose value is the longest string.'''
 
+def longest_value_key(d):
+    longest_key = None
+    longest_length = 0
+
+    for key, value in d.items():
+        if len(value) > longest_length:
+            longest_length = len(value)
+            longest_key = key
+
+    return longest_key
+
+
+d = {
+    "a": "Python",
+    "b": "Data Science",
+    "c": "SQL",
+    "d": "Machine Learning"
+}
+
+print(longest_value_key(d))
 
 
 
