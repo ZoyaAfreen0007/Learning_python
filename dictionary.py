@@ -206,7 +206,45 @@ d = {
 print(longest_value_key(d))
 
 
+'''Given a nested dictionary of employees, find the employee with the highest salary in each department.'''
 
+def highest_salary_by_department(company):
+    result = {}
+
+    for department, employees in company.items():
+
+        highest_employee = None
+        highest_salary = -1
+
+        for employee, salary in employees.items():
+            if salary > highest_salary:
+                highest_salary = salary
+                highest_employee = employee
+
+        result[department] = highest_employee
+
+    return result
+
+
+company = {
+    "IT": {
+        "Rahul": 50000,
+        "Aman": 70000,
+        "Priya": 60000
+    },
+
+    "HR": {
+        "Neha": 45000,
+        "Riya": 55000
+    },
+
+    "Sales": {
+        "Arjun": 40000,
+        "Karan": 65000
+    }
+}
+
+print(highest_salary_by_department(company))
 
 
 
