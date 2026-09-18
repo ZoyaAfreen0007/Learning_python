@@ -247,7 +247,25 @@ company = {
 print(highest_salary_by_department(company))
 
 
+'''Write a function that accepts a sentence and returns a dictionary containing the frequency of every word.'''
 
+def word_frequency(sentence):
+    result = {}
+
+    words = sentence.lower().split()
+
+    for word in words:
+        if word in result:
+            result[word] += 1
+        else:
+            result[word] = 1
+
+    return result
+
+
+sentence = "python is easy and python is powerful"
+
+print(word_frequency(sentence))
 
 
 
