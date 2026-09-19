@@ -268,5 +268,34 @@ sentence = "python is easy and python is powerful"
 print(word_frequency(sentence))
 
 
+'''Using the same nested dictionary structure, return the student having the highest average marks.'''
 
+def best_student(students):
+    best = None
+    highest_average = -1
+
+    for student, subjects in students.items():
+        total = 0
+        count = 0
+
+        for marks in subjects.values():
+            total += marks
+            count += 1
+
+        average = total / count
+
+        if average > highest_average:
+            highest_average = average
+            best = student
+
+    return best
+
+
+students = {
+    "A": {"Math": 80, "Python": 90, "SQL": 70},
+    "B": {"Math": 60, "Python": 75, "SQL": 85},
+    "C": {"Math": 90, "Python": 95, "SQL": 88}
+}
+
+print(best_student(students))
 
