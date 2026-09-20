@@ -299,3 +299,39 @@ students = {
 
 print(best_student(students))
 
+
+'''students = {
+    "A": {"Math": 70, "Python": 80, "SQL": 65},
+    "B": {"Math": 30, "Python": 75, "SQL": 80},
+    "C": {"Math": 60, "Python": 55, "SQL": 70}
+}
+
+Write a function that returns students who scored at least 40 in every subject.'''
+
+def passed_students(students):
+    result = []
+
+    for student in students:
+        passed = True
+
+        for marks in students[student].values():
+            if marks < 40:
+                passed = False
+                break
+
+        if passed:
+            result.append(student)
+
+    return result
+
+
+students = {
+    "A": {"Math": 70, "Python": 80, "SQL": 65},
+    "B": {"Math": 30, "Python": 75, "SQL": 80},
+    "C": {"Math": 60, "Python": 55, "SQL": 70}
+}
+
+print(passed_students(students))
+
+
+
