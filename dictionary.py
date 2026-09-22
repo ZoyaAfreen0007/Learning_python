@@ -374,3 +374,26 @@ company = {
 }
 
 print(highest_salary_by_department(company))
+
+
+'''If a key exists in both dictionaries, multiply their values. Otherwise, keep the existing value.'''
+
+def multiply_common(d1, d2):
+    result = {}
+
+    for key, value in d1.items():
+        result[key] = value
+
+    for key, value in d2.items():
+        if key in result:
+            result[key] *= value
+        else:
+            result[key] = value
+
+    return result
+
+
+d1 = {"a": 2, "b": 3, "c": 4}
+d2 = {"b": 5, "c": 2, "d": 10}
+
+print(multiply_common(d1, d2))
