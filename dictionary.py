@@ -397,3 +397,44 @@ d1 = {"a": 2, "b": 3, "c": 4}
 d2 = {"b": 5, "c": 2, "d": 10}
 
 print(multiply_common(d1, d2))
+
+
+'''Write a function that removes duplicate values from a dictionary. Keep the first occurrence of each value.'''
+
+def remove_duplicate_values(d):
+    result = {}
+    seen = []
+
+    for key, value in d.items():
+        if value not in seen:
+            result[key] = value
+            seen.append(value)
+
+    return result
+
+
+d = {"a": 10, "b": 20, "c": 10, "d": 30, "e": 20}
+
+print(remove_duplicate_values(d))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
