@@ -28,3 +28,40 @@ print("Lowest:", lowest)
 print("Marks >= 75:", above_75)
 print("Failed marks:", failed)
     
+
+''' Store only True states. Create a list containing only the states when the state is True.
+Given: items = ["a","toggle","b","c", "toggle","e" ]
+'''
+
+state = True
+result = []
+items = ["a","toggle","b","c", "toggle","e" ]
+for item in items:
+   if item == "toggle":
+      state = not state
+   if state == True:
+      result.append(state)
+  
+      print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
