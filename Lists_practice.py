@@ -88,6 +88,25 @@ for item in items:
 print (list)
 
 
+'''Find the longest continuous True period 
+Example:
+states = [False, True, True,True, False,True,True,False]
+'''
+
+states = [False, True, True,True, False,True,True,False]
+
+count = 0 
+maxCount = 0 
+
+for state in states:
+    if state == 1:
+        count += 1 
+    if count > maxCount :
+        maxCount = count
+    
+    if state == 0:
+        count = 0
+print (count, maxCount)
 
 
 
