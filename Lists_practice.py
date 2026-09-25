@@ -45,6 +45,47 @@ for item in items:
       print(result)
 
 
+#. Two possible trigger words. Toggle the state whenever on or off appears.abs
+#. Condition: both "on" and "off" should toggle the state.
+
+state = True
+result= []
+
+items = ["hello", "on", "abc", "off", "xyz", "on", "test"]
+
+for item in items:
+    if item == "on" or "off":
+        state = not state
+        result.append(state)
+    else:
+        result.append(state)
+print(result)         
+
+
+#. ADD COUNTING:-
+#. final state= .....abs
+#. Number of changes = ....abs
+
+state = True
+result = []
+
+items = ["x", "change", "y","change", "z","change"]
+for item in items:
+    if item == "change":
+        state = not state
+        result.append(state)
+    else:
+         result.append(state)
+print (result)
+ 
+list = 0
+for item in items:
+    if item == "change":
+        list += 1
+    else:
+        list += 0
+
+print (list)
 
 
 
