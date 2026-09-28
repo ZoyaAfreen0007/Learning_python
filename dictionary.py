@@ -418,6 +418,39 @@ d = {"a": 10, "b": 20, "c": 10, "d": 30, "e": 20}
 print(remove_duplicate_values(d))
 
 
+users = "{[()]}"
+
+opening_stack = []
+closing_stack = []
+
+pairs = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+}
+
+for char in users:
+
+    if char in '([{':
+        opening_stack.append(char)
+
+    elif char in ')]}':
+        if opening_stack and pairs[opening_stack[-1]] == char:
+            opening_stack.pop()
+            closing_stack.append(char)
+        else:
+            print("Wrong bracket sequence")
+print (opening_stack)
+print (closing_stack)
+
+else:
+    if not opening_stack:
+        print("Correct bracket sequence")
+        print("Opening stack:", opening_stack)
+        print("Closing stack:", closing_stack)
+    else:
+        print("Wrong bracket sequence")
+
 
 
 
