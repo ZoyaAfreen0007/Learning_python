@@ -133,3 +133,61 @@ even_squares = [
 
 print("\nSquares of even numbers:")
 print(even_squares)
+
+
+
+
+
+
+
+
+
+
+
+def valid_braces(string):
+    pairs = {')': '(', ']': '[', '}': '{'}  # closing -> matching opening
+    stack = []
+
+    for char in string:
+        if char in '([{':
+            stack.append(char)
+        else:
+            # closing bracket with nothing open, or the wrong one open
+            if not stack or stack.pop() != pairs[char]:
+                return False
+
+    # anything left over was opened but never closed
+    return not stack    
+
+
+if __name__ == "__main__":
+    tests = [
+        ("(){}[]", True),
+        ("([{}])", True),
+        ("(}", False),
+        ("[(])", False),
+        ("[({})](]", False),
+        ("(", False),          # never closed
+        (")", False),          # closes before opening
+        ("())(", False),       # counts match but order is wrong
+        ("{[()()]}[]", True),
+    ]
+    for s, expected in tests:
+        got = valid_braces(s)
+        print(f"{'PASS' if got == expected else 'FAIL'}  valid_braces({s!r}) -> {got!r}, expected {expected!r}")  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
