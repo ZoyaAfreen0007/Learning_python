@@ -594,6 +594,16 @@ print("Elements appearing in exactly two sets:", result)
 
 
 
+#. Create a set of five elements. Use pop() to remove one element and print both the removed element and the remaining set.  
+numbers = {10, 20, 30, 40, 50}
+
+removed_element = numbers.pop()
+
+print("Removed element:", removed_element)
+print("Remaining set:", numbers)
+
+
+
 
 
 
