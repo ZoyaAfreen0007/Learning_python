@@ -605,6 +605,14 @@ print("Remaining set:", numbers)
 
 
 
+#.Given set1 = {10, 20, 30, 40} and set2 = {30, 40, 50, 60}, find the common elements using intersection().  
+set1 = {10, 20, 30, 40}
+set2 = {30, 40, 50, 60}
+
+common = set1.intersection(set2)
+
+print("Common elements:", common)
+
 
 
 
