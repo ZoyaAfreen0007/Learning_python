@@ -134,11 +134,14 @@ for number in numbers:
 
 
 
+#. user = " my name is khan."
 
+words = user.split()
 
+words = [ word [0].upper () + word [1:].lower () for word in words ]
 
-
-
+user = " ".join(words)
+print ( user )
 
 
 
