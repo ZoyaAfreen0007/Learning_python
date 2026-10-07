@@ -643,9 +643,22 @@ print("Common elements:", common)
 
 
 
+'''numbers = {10, 15, 20, 25, 30, 35, 40, 45}
+
+remove = {15, 25, 35}
+
+Remove all values from remove that are present in numbers.
+
+Print the final set.'''
 
 
+ numbers = {10, 15, 20, 25, 30, 35, 40, 45}
 
+remove = {15, 25, 35}
+
+numbers.difference_update(remove)
+
+print(numbers)
 
 
 
