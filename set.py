@@ -661,7 +661,32 @@ numbers.difference_update(remove)
 print(numbers)
 
 
+employees = {
+"Ali": {"Python", "SQL", "Excel"},
+"Zoya": {"Python", "SQL", "Power BI"},
+"Rahul": {"Java", "SQL", "Excel"},
+"Neha": {"Python", "Excel", "Power BI"}
+}
 
+required = {"Python", "SQL"}
+
+Find employees who have ALL the required skills.
+
+
+
+
+employees = {
+    "Ali": {"Python", "SQL", "Excel"},
+    "Zoya": {"Python", "SQL", "Power BI"},
+    "Rahul": {"Java", "SQL", "Excel"},
+    "Neha": {"Python", "Excel", "Power BI"}
+}
+
+required = {"Python", "SQL"}
+
+for employee, skills in employees.items():
+    if required <= skills:
+        print(employee)
 
 
 
