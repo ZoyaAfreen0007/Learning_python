@@ -690,7 +690,19 @@ for employee, skills in employees.items():
 
 
 
+'''Check whether two sets are disjoint
+A = {1, 2, 3, 4}
+B = {5, 6, 7, 8}
 
+Check whether A and B have no common elements.
+
+Print True or False.'''
+
+
+A = {1, 2, 3, 4}
+B = {5, 6, 7, 8}
+
+print(A.isdisjoint(B))
 
 
 
