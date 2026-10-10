@@ -704,6 +704,48 @@ B = {5, 6, 7, 8}
 
 print(A.isdisjoint(B))
 
+''' Students enrolled in exactly one course
+python = {"Ali", "Zoya", "Rahul"}
+sql = {"Zoya", "Neha", "Aman"}
+excel = {"Rahul", "Neha", "Priya"}
+
+Find students who are enrolled in exactly ONE course.'''
+
+python = {"Ali", "Zoya", "Rahul"}
+sql = {"Zoya", "Neha", "Aman"}
+excel = {"Rahul", "Neha", "Priya"}
+
+# Students enrolled in exactly ONE course
+result = (python - sql - excel) | \
+         (sql - python - excel) | \
+         (excel - python - sql)
+
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
