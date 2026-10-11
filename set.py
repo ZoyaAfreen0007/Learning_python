@@ -723,7 +723,15 @@ result = (python - sql - excel) | \
 print(result)
 
 
+''' Find unique words in a sentence
+sentence = "python is easy and python is powerful and easy'''
 
+
+# Convert the sentence into a set of unique words.
+
+sentence = "python is easy and python is powerful and easy"
+words = set(sentence.split())
+print(words)
 
 
 
