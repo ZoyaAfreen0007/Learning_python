@@ -734,8 +734,18 @@ words = set(sentence.split())
 print(words)
 
 
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+'''Create a set of five elements. Use pop() to remove one element and print both the removed element and the remaining set.
+Method: pop()'''
 
 
+numbers = {10, 20, 30, 40, 50}
+
+removed = numbers.pop()
+
+print("Removed element:", removed)
+print("Remaining set:", numbers)
 
 
 
