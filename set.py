@@ -748,7 +748,17 @@ print("Removed element:", removed)
 print("Remaining set:", numbers)
 
 
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4
 
+'''Given a list of student names with duplicates, create a set of unique names and print the total number of unique students.
+Concept: set() + len()'''
+
+
+students = ["Aman", "Riya", "Rahul", "Aman", "Priya", "Riya"]
+unique_students = set(students)
+
+print("Unique students:", unique_students)
+print("Total unique students:", len(unique_students))
 
 
 
