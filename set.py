@@ -761,7 +761,18 @@ print("Unique students:", unique_students)
 print("Total unique students:", len(unique_students))
 
 
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+
+'''Given two sets of students who know Python and Java, find the students who know Python but not Java.
+Concept: difference()'''
+
+python_students = {"Aman", "Riya", "Rahul", "Priya"}
+java_students = {"Riya", "Priya", "Karan"}
+
+result = python_students.difference(java_students)
+
+print("Students who know Python but not Java:", result)
 
 
 
