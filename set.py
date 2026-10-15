@@ -776,12 +776,17 @@ print("Students who know Python but not Java:", result)
 
 
 
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+'''
+Create a set {10, 20, 30, 40}. Use discard() to remove 50. Print the set and observe the result.
+Method: discard()
+'''
+numbers = {10, 20, 30, 40}
 
+numbers.discard(50)
 
-
-
-
+print("Updated set:", numbers)
 
 
 
