@@ -788,6 +788,40 @@ numbers.discard(50)
 
 print("Updated set:", numbers)
 
+#####################################################################################################
+
+'''Create a set containing {10, 20, 30}. Add 40, 50 and 60 using a single update() statement.
+Method: update()
+'''
+numbers = {10, 20, 30}
+
+numbers.update([40, 50, 60])
+
+print("Updated set:", numbers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
