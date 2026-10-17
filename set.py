@@ -799,9 +799,18 @@ numbers.update([40, 50, 60])
 
 print("Updated set:", numbers)
 
+###############################################################################################################
+
+'''Given a list of student names with duplicates, create a set of unique names and print the total number of unique students.
+Concept: set() + len()'''
 
 
+students = ["Aman", "Riya", "Rahul", "Aman", "Priya", "Riya"]
 
+unique_students = set(students)
+
+print("Unique students:", unique_students)
+print("Total unique students:", len(unique_students))
 
 
 
