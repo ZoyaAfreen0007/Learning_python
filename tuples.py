@@ -357,10 +357,22 @@ print(tuple_sum(t))
 
 
 
+#Given t = (10, 20, 30, 40, 50), find the second-largest element without using max() or sorting.
 
 
+t = (10, 20, 30, 40, 50)
 
+largest = t[0]
+second_largest = t[0]
 
+for i in t:
+    if i > largest:
+        second_largest = largest
+        largest = i
+    elif i > second_largest and i != largest:
+        second_largest = i
+
+print("Second largest element:", second_largest)
 
 
 
