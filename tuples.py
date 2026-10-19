@@ -375,6 +375,17 @@ for i in t:
 print("Second largest element:", second_largest)
 
 
+#. Given t = (1, 2, 2, 3, 3, 3, 4), create a tuple containing each distinct element only once, preserving the original order.
+
+t = (1, 2, 2, 3, 3, 3, 4)
+
+result = ()
+
+for i in t:
+    if i not in result:
+        result = result + (i,)
+
+print(result)
 
 
 
