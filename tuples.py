@@ -387,7 +387,17 @@ for i in t:
 
 print(result)
 
+'''Given t = ((1, 2), (3, 4), (5, 6)), calculate the sum of all the numbers in the nested tuple.'''
 
+t = ((1, 2), (3, 4), (5, 6))
+
+total = 0
+
+for i in t:
+    for j in i:
+        total = total + j
+
+print("Sum:", total)
 
 
 
