@@ -400,9 +400,16 @@ for i in t:
 print("Sum:", total)
 
 
+'''Given t = (10, 20, 30, 40, 50), find the pair of elements whose sum equals 60.
+'''
 
 
+t = (10, 20, 30, 40, 50)
 
+for i in range(len(t)):
+    for j in range(i + 1, len(t)):
+        if t[i] + t[j] == 60:
+            print(t[i], t[j])
 
 
 
