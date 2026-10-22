@@ -412,8 +412,23 @@ for i in range(len(t)):
             print(t[i], t[j])
 
 
+#. Given t = (4, 7, 2, 9, 5, 8), find the longest continuous sequence of increasing numbers.
+t = (4, 7, 2, 9, 5, 8)
 
+longest = (t[0],)
+current = (t[0],)
 
+for i in range(1, len(t)):
+    if t[i] > t[i - 1]:
+        current = current + (t[i],)
+    else:
+        current = (t[i],)
+
+    if len(current) > len(longest):
+        longest = current
+
+print("Longest increasing sequence:", longest)
+print("Length:", len(longest))
 
 
 
