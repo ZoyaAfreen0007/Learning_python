@@ -431,6 +431,42 @@ print("Longest increasing sequence:", longest)
 print("Length:", len(longest))
 
 
+'''Convert the list [10, 20, 30, 40] into a tuple, then calculate its sum without using sum().'''
+
+numbers = [10, 20, 30, 40]
+
+t = tuple(numbers)
+
+total = 0
+
+for i in t:
+    total = total + i
+
+print("Tuple:", t)
+print("Sum:", total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
