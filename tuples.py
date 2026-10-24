@@ -446,7 +446,16 @@ print("Tuple:", t)
 print("Sum:", total)
 
 
+'''Given t = (2, 4, 6, 8, 10), check whether every element is even.'''
 
+t = (2, 4, 6, 8, 10)
+
+for i in t:
+    if i % 2 != 0:
+        print("Not all elements are even")
+        break
+else:
+    print("All elements are even")
 
 
 
