@@ -458,7 +458,14 @@ else:
     print("All elements are even")
 
 
+'''Given t = (10, 20, 30) and u = (40, 50, 60), combine them into one tuple.'''
 
+t = (10, 20, 30)
+u = (40, 50, 60)
+
+result = t + u
+
+print(result)
 
 
 
