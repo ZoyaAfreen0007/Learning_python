@@ -467,10 +467,27 @@ result = t + u
 
 print(result)
 
+'''Find the third-largest distinct element
+
+Given t = (12, 45, 23, 45, 67, 34, 67, 56), find the third-largest distinct element without using max(), sorted(), or sort().'''
 
 
+largest = float('-inf')
+second_largest = float('-inf')
+third_largest = float('-inf')
 
+for i in t:
+    if i > largest:
+        third_largest = second_largest
+        second_largest = largest
+        largest = i
+    elif i > second_largest and i != largest:
+        third_largest = second_largest
+        second_largest = i
+    elif i > third_largest and i != second_largest and i != largest:
+        third_largest = i
 
+print("Third-largest distinct element:", third_largest)
 
 
 
