@@ -490,8 +490,17 @@ for i in t:
 print("Third-largest distinct element:", third_largest)
 
 
+'''Find all pairs with a target sum
 
+Given t = (2, 7, 11, 15, 3, 6, 9) and target = 18, print every unique pair whose sum equals the target.'''
 
+t = (2, 7, 11, 15, 3, 6, 9)
+target = 18
+
+for i in range(len(t)):
+    for j in range(i + 1, len(t)):
+        if t[i] + t[j] == target:
+            print(t[i], t[j])
 
 
 
