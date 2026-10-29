@@ -517,7 +517,27 @@ for i in t:
 print(result)
 
 
+'''Find the longest increasing continuous sequence
 
+Given t = (3, 5, 7, 2, 4, 6, 8, 1, 9, 10, 11), find the longest continuous strictly increasing sequence and its length.'''
+
+
+t = (3, 5, 7, 2, 4, 6, 8, 1, 9, 10, 11)
+
+longest = (t[0],)
+current = (t[0],)
+
+for i in range(1, len(t)):
+    if t[i] > t[i - 1]:
+        current = current + (t[i],)
+    else:
+        current = (t[i],)
+
+    if len(current) > len(longest):
+        longest = current
+
+print("Longest increasing sequence:", longest)
+print("Length:", len(longest))
 
 
 
