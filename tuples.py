@@ -540,6 +540,27 @@ print("Longest increasing sequence:", longest)
 print("Length:", len(longest))
 
 
+'''Flatten a nested tuple
+
+Given t = ((1, 2), (3, 4, 5), (6,), (7, 8, 9)), convert it into a single tuple: (1, 2, 3, 4, 5, 6, 7, 8, 9). Do not use list comprehensions.
+Python Program'''
+
+
+
+t = ((1, 2), (3, 4, 5), (6,), (7, 8, 9))
+
+result = ()
+
+for i in t:
+    for j in i:
+        result = result + (j,)
+
+print("Flattened tuple:", result)
+
+
+
+
+
 
 
 
