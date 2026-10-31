@@ -558,6 +558,44 @@ for i in t:
 print("Flattened tuple:", result)
 
 
+'''Given t = (3, 5, 3, 7, 5, 3, 9, 5, 5, 2), find the element that occurs most frequently and its frequency. If tied, report all tied elements.'''
+
+
+
+t = (3, 5, 3, 7, 5, 3, 9, 5, 5, 2)
+
+max_frequency = 0
+result = ()
+
+for i in t:
+    frequency = t.count(i)
+
+    if frequency > max_frequency:
+        max_frequency = frequency
+        result = (i,)
+    elif frequency == max_frequency and i not in result:
+        result = result + (i,)
+
+print("Most frequent elements:", result)
+print("Frequency:", max_frequency)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
