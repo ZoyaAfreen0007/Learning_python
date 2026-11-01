@@ -581,6 +581,19 @@ print("Frequency:", max_frequency)
 
 
 
+'''Check whether two tuples are rotations
+
+Given a = (1, 2, 3, 4, 5) and b = (3, 4, 5, 1, 2), determine whether b is a circular rotation of a without converting either tuple to a list.'''
+
+
+a = (1, 2, 3, 4, 5)
+b = (3, 4, 5, 1, 2)
+
+if len(a) == len(b) and b in (a + a):
+    print("Both tuples are circular rotations")
+else:
+    print("Both tuples are not circular rotations")
+
 
 
 
