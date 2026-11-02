@@ -812,11 +812,19 @@ unique_students = set(students)
 print("Unique students:", unique_students)
 print("Total unique students:", len(unique_students))
 
+'''Find Common Elements in Three Lists
+
+Given three lists:
+a = [10, 20, 30, 40, 50, 60]b = [20, 30, 50, 70, 80]c = [10, 20, 30, 50, 90]
 
 
 
+Find the elements that are present in all three lists using sets.'''
 
 
+
+common = set(a) & set(b) & set(c)
+print(common)
 
 
 
