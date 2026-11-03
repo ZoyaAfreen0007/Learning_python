@@ -828,8 +828,21 @@ print(common)
 
 
 
+'''Find Elements Unique to Each Set
+a = {10, 20, 30, 40}b = {30, 40, 50, 60}c = {40, 60, 70, 80}
 
 
+
+Find the elements that belong exclusively to each set.'''
+
+
+A = a - (b | c)
+B = b - (a | c)
+C = c - (a | b)
+
+print("A:", A)
+print("B:", B)
+print("C:", C)
 
 
 
