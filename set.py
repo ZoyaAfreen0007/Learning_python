@@ -846,6 +846,24 @@ print("C:", C)
 
 
 
+'''Find Pairs with a Given Sum
+numbers = {2, 4, 6, 8, 10, 12, 14}
+target = 16
+Find all unique pairs whose sum equals the target.'''
+
+
+numbers = {2, 4, 6, 8, 10, 12, 14}
+target = 16
+
+for i in numbers:
+    for j in numbers:
+        if i + j == target and i < j:
+            print(i, j)
+
+
+
+
+
 
 
 
