@@ -862,10 +862,21 @@ for i in numbers:
 
 
 
+'''Find Whether Two Lists Contain the Same Unique Elements
+a = [10, 20, 30, 20, 40]b = [40, 30, 20, 10, 10]
+Check whether both lists contain exactly the same unique elements, regardless of order or frequency.'''
 
 
+a = [10, 20, 30, 20, 40]
+b = [40, 30, 20, 10, 10]
 
+set_a = set(a)
+set_b = set(b)
 
+if set_a == set_b:
+    print("Both lists contain the same unique elements")
+else:
+    print("Both lists contain different elements")
 
 
 
