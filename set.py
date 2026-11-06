@@ -879,6 +879,40 @@ else:
     print("Both lists contain different elements")
 
 
+'''Remove Common Elements from Two Sets
+a = {10, 20, 30, 40, 50}b = {30, 40, 60, 70}
+Remove all elements from both sets that are common to them.'''
+
+
+a = {10, 20, 30, 40, 50}
+b = {30, 40, 60, 70}
+
+common = a.intersection(b)
+
+a.difference_update(common)
+b.difference_update(common)
+
+print("Set A:", a)
+print("Set B:", b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
