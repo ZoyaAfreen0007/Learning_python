@@ -898,11 +898,19 @@ print("Set B:", b)
 
 
 
+'''Check Whether One Set Is a Proper Subset of Another
+a = {10, 20, 30}b = {10, 20, 30, 40, 50}
+Check whether a is a proper subset of b without using issubset().
+Concept: difference() and comparison.'''
 
 
+a = {10, 20, 30}
+b = {10, 20, 30, 40, 50}
 
-
-
+if a - b == set() and a != b:
+    print("A is a proper subset of B")
+else:
+    print("A is not a proper subset of B")
 
 
 
