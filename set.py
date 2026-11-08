@@ -913,10 +913,32 @@ else:
     print("A is not a proper subset of B")
 
 
+'''Find the Longest Consecutive Sequence
+numbers = {100, 4, 200, 1, 3, 2, 5, 6}
+Find the longest sequence of consecutive numbers.'''
 
 
+longest_sequence = []
 
+for num in numbers:
 
+    if num - 1 not in numbers:
+
+        current = num
+        count = 1
+        sequence = [num]
+
+        while current + 1 in numbers:
+            current += 1
+            count += 1
+            sequence.append(current)
+
+        if count > longest:
+            longest = count
+            longest_sequence = sequence
+
+print("Longest sequence:", longest_sequence)
+print("Length:", longest)
 
 
 
