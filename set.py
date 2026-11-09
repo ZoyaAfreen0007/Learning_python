@@ -942,6 +942,57 @@ print("Length:", longest)
 
 
 
+'''Find Elements Appearing in at Least Two Lists
+a = {1, 2, 3, 4, 5}b = {3, 4, 5, 6, 7}c = {5, 6, 7, 8, 9}
+
+
+
+Find all elements that appear in at least two sets.'''
+
+a = {1, 2, 3, 4, 5}
+b = {3, 4, 5, 6, 7}
+c = {5, 6, 7, 8, 9}
+
+count = {}
+
+for s in [a, b, c]:
+    for num in s:
+        count[num] = count.get(num, 0) + 1
+
+result = set()
+
+for num in count:
+    if count[num] >= 2:
+        result.add(num)
+
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
