@@ -968,10 +968,21 @@ for num in count:
 print(result)
 
 
+'''Find All Missing Elements from Two Sets
+a = {1, 2, 4, 6, 8}b = {2, 3, 5, 7, 8}
+Consider all numbers from 1 to 8. Find which numbers are missing from both sets combined.'''
 
 
+a = {1, 2, 4, 6, 8}
+b = {2, 3, 5, 7, 8}
 
+all_numbers = set(range(1, 9))
 
+combined = a | b
+
+missing = all_numbers - combined
+
+print(missing)
 
 
 
