@@ -599,7 +599,15 @@ else:
 
 
 
+'''Find the second-largest unique element
+Given a tuple, find the second-largest unique number without converting it into a list or set.'''
 
+
+numbers = (10, 20, 30, 20, 40, 50, 40)
+numbers = (10, 20, 30, 20, 40, 50, 40)
+unique_numbers = tuple(dict.fromkeys(numbers))
+sorted_numbers = tuple(sorted(unique_numbers))
+print(sorted_numbers[-2])
 
 
 
