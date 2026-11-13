@@ -610,6 +610,17 @@ sorted_numbers = tuple(sorted(unique_numbers))
 print(sorted_numbers[-2])
 
 
+'''Count the frequency of every element
+Find how many times each element occurs in a tuple.'''
+
+
+
+data = (1, 2, 3, 2, 4, 1, 2, 5, 3, 2)
+data = (1, 2, 3, 2, 4, 1, 2, 5, 3, 2)
+    for item in dict.fromkeys(data):
+        print(item, "occurs", data.count(item), "times")
+
+
 
 
 
