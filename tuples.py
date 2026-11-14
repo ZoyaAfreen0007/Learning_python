@@ -622,7 +622,14 @@ data = (1, 2, 3, 2, 4, 1, 2, 5, 3, 2)
 
 
 
+'''Find common elements between two tuples
+Find the common elements without repeating them.
+a = (10, 20, 30, 40, 50)b = (30, 40, 50, 60, 70)'''
 
+a = (10, 20, 30, 40, 50)
+b = (30, 40, 50, 60, 70)
+result = tuple(x for x in dict.fromkeys(a) if x in b)
+print(result)
 
 
 
