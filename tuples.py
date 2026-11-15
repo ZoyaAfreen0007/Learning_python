@@ -633,7 +633,12 @@ print(result)
 
 
 
+'''Reverse a tuple without using reverse()
+numbers = (10, 20, 30, 40, 50, 60)'''
 
+numbers = (10, 20, 30, 40, 50, 60)
+result = numbers[::-1]
+print(result)
 
 
 
