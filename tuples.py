@@ -641,6 +641,36 @@ result = numbers[::-1]
 print(result)
 
 
+'''Find the index of the last occurrence
+Find the last occurrence of 20 in the tuple.
+numbers = (10, 20, 30, 20, 40, 20, 50)'''
+
+numbers = (10, 20, 30, 20, 40, 20, 50)
+result = len(numbers) - 1 - numbers[::-1].index(20)
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
