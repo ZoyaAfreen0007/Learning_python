@@ -651,7 +651,14 @@ print(result)
 
 
 
+'''Remove all occurrences of a given element
+Remove every occurrence of 30 without converting the tuple into a list.
+numbers = (10, 30, 20, 30, 40, 30, 50)'''
 
+
+numbers = (10, 30, 20, 30, 40, 30, 50)
+result = tuple(x for x in numbers if x != 30)
+print(result)
 
 
 
