@@ -661,7 +661,13 @@ result = tuple(x for x in numbers if x != 30)
 print(result)
 
 
+'''Swap the first and last elements
+Swap the first and last elements of the tuple.
+numbers = (5, 10, 15, 20, 25)'''
 
+numbers = (5, 10, 15, 20, 25)
+result = (numbers[-1],) + numbers[1:-1] + (numbers[0],)
+print(result)
 
 
 
