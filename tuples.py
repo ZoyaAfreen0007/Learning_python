@@ -670,7 +670,13 @@ result = (numbers[-1],) + numbers[1:-1] + (numbers[0],)
 print(result)
 
 
+'''Flatten a nested tuple
+Convert a two-level nested tuple into a single tuple.
+data = ((1, 2), (3, 4), (5, 6))'''
 
+data = ((1, 2), (3, 4), (5, 6))
+result = tuple(item for group in data for item in group)
+print(result)
 
 
 
