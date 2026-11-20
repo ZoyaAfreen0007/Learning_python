@@ -679,7 +679,13 @@ result = tuple(item for group in data for item in group)
 print(result)
 
 
+'''Find elements that appear exactly twice
+numbers = (1, 2, 3, 2, 4, 3, 5, 6, 3, 1)'''
 
+numbers = (1, 2, 3, 2, 4, 3, 5, 6, 3, 1)
+result = tuple(    x for x in dict.fromkeys(numbers)    
+               if numbers.count(x) == 2)
+print(result)
 
 
 
