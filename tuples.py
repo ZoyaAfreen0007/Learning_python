@@ -683,8 +683,9 @@ print(result)
 numbers = (1, 2, 3, 2, 4, 3, 5, 6, 3, 1)'''
 
 numbers = (1, 2, 3, 2, 4, 3, 5, 6, 3, 1)
-result = tuple(    x for x in dict.fromkeys(numbers)    
-               if numbers.count(x) == 2)
+result = tuple(   
+    x for x in dict.fromkeys(numbers)    
+    if numbers.count(x) == 2)
 print(result)
 
 
