@@ -688,7 +688,14 @@ result = tuple(
     if numbers.count(x) == 2)
 print(result)
 
+'''Rotate a tuple to the right by two positions
+numbers = (10, 20, 30, 40, 50, 60)'''
 
+numbers = (10, 20, 30, 40, 50, 60)
+k = 2
+k = k % len(numbers)
+result = numbers[-k:] + numbers[:-k]
+print(result)
 
 
 
