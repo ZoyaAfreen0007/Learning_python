@@ -698,7 +698,18 @@ result = numbers[-k:] + numbers[:-k]
 print(result)
 
 
+'''Find pairs whose sum equals a target
+Find all pairs of elements whose sum equals 10.'''
 
+
+numbers = (2, 3, 4, 5, 6, 7, 8)
+target = 10
+result = tuple(   
+    (numbers[i], numbers[j])   
+    for i in range(len(numbers)) 
+    for j in range(i + 1, len(numbers)) 
+    if numbers[i] + numbers[j] == target)
+print(result)
 
 
 
