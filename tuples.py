@@ -711,6 +711,13 @@ result = tuple(
     if numbers[i] + numbers[j] == target)
 print(result)
 
+'''Sort a tuple of tuples by the second element
+data = (    ("A", 500),    ("B", 200),    ("C", 800),    ("D", 300))'''
+
+data = (    ("A", 500),    ("B", 200),    ("C", 800),    ("D", 300))
+result = tuple(sorted(data, key=lambda x: x[1]))
+print(result)
+
 
 
 
