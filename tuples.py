@@ -718,6 +718,15 @@ data = (    ("A", 500),    ("B", 200),    ("C", 800),    ("D", 300))
 result = tuple(sorted(data, key=lambda x: x[1]))
 print(result)
 
+'''Find the maximum and minimum values in a nested tuple
+data = ((10, 20), (5, 40), (15, 2), (50, 30))'''
+
+
+data = ((10, 20), (5, 40), (15, 2), (50, 30))
+flattened = tuple(x for group in data for x in group)
+print("Maximum:", max(flattened))
+print("Minimum:", min(flattened))
+
 
 
 
