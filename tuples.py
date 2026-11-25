@@ -728,6 +728,17 @@ print("Maximum:", max(flattened))
 print("Minimum:", min(flattened))
 
 
+'''Unpack a tuple with starred expressions
+Extract the first element, last element, and all middle elements separately.
+data = (10, 20, 30, 40, 50, 60)'''
+
+data = (10, 20, 30, 40, 50, 60)
+first, *middle, last = data
+print("First:", first)
+print("Middle:", tuple(middle))
+print("Last:", last)
+
+
 
 
 
