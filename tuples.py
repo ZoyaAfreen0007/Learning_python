@@ -739,6 +739,41 @@ print("Middle:", tuple(middle))
 print("Last:", last)
 
 
+'''Find the cumulative sum as a tuple
+numbers = (10, 20, 30, 40, 50)'''
+
+
+numbers = (10, 20, 30, 40, 50)
+total = 0
+result = ()
+for num in numbers: 
+    total += num    
+    result += (total,)
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
