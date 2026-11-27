@@ -752,7 +752,16 @@ for num in numbers:
 print(result)
 
 
+'''Identify the highest-performing product category
+You have sales data stored in a tuple.
+sales = (    ("Electronics", 50000),    ("Furniture", 35000),    ("Clothing", 60000),    ("Food", 25000))
+Find the category with the highest sales.'''
 
+
+sales = (("Electronics", 50000),    ("Furniture", 35000),    ("Clothing", 60000),    ("Food", 25000))
+highest = max(sales, key=lambda x: x[1])
+print("Highest category:", highest[0])
+print("Sales:", highest[1])
 
 
 
