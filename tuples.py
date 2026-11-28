@@ -766,7 +766,21 @@ print("Sales:", highest[1])
 
 
 
+'''Identify loss-making products
+Given product sales and expenses, identify products making a loss.
+data = (    ("Laptop", 50000, 30000),    ("Mobile", 40000, 45000),    ("Tablet", 30000, 20000),    ("Printer", 15000, 18000))'''
 
+
+data = (    ("Laptop", 50000, 30000), 
+            ("Mobile", 40000, 45000),
+            ("Tablet", 30000, 20000),  
+            ("Printer", 15000, 18000)   )
+
+result = tuple(    (product, sales - expenses)   
+               for product, sales, expenses in data   
+               if sales < expenses)
+
+print(result)
 
 
 
